@@ -1,0 +1,7 @@
+@mixin for-size($range) {
+    $medium: 750px;
+
+    @if ($range == medium) {
+        @media (min-width: $medium) {@content}
+    }
+}

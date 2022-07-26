@@ -1,0 +1,53 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    background-color: var(--light-grayish-cyan);
+
+    font-family: var(--primary-font);
+    color: var(--dark-grayish-cyan);
+}
+
+a {
+    text-decoration: none;
+}
+
+p, a {
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.25rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+img {
+    max-width: 100%;
+}

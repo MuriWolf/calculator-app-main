@@ -1,0 +1,97 @@
+@use "../utilities/breakpoints" as bp;
+
+.l-tip-calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    background-color: var(--white);
+    width: 100%;
+    max-width: 900px;
+
+    margin-top: 7rem;
+    padding: 34px;
+
+    border-radius: var(--border--lg);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.150);
+
+    @include bp.for-size(medium) {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .main-title {
+        position: absolute;
+        top: -120px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2.25rem;
+        color: var(--very-dark-cyan);
+        text-transform: uppercase;
+        line-height: 1.35em;
+        letter-spacing: 0.5em;
+    }
+}
+
+.calculator-inputs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.calculator-inputs__section {
+    margin-bottom: 4rem;
+
+    .calculator-inputs__section__title {
+        margin-bottom: 0.6em;
+    }
+} 
+
+.calculator-inputs__section__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    & > * {
+        flex: 1 1 100px;
+    }
+}
+
+.calculator-results {
+    flex: 1;
+    padding: 4rem 3.6rem;
+    margin-top: 4rem;
+    background-color: var(--very-dark-cyan);
+    border-radius: var(--border--md);
+
+    @include bp.for-size(medium) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0rem;
+    }
+}
+
+.calculator-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @include bp.for-size(medium) {
+        margin-bottom: 1.5rem;
+    }
+
+    .calculator-result__money {
+        font-size: 2.5rem;
+        color: var(--strong-cyan);
+    
+        @include bp.for-size(medium) {
+            font-size: 4.5rem
+        }
+    }
+}
+

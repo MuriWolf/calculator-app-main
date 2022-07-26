@@ -1,0 +1,59 @@
+.error-input {
+    outline: 2px solid red;
+    position: relative;
+    border-radius: var(--border--sm);
+
+    &::before {
+        content: "cant be zero";
+        color: red;
+        font-size: 1.6rem;
+        position: absolute;
+        right: 0;
+        bottom: 300%;
+    }
+}
+
+
+.text {
+    &--white {
+        color: var(--white);
+    }
+
+    &--dark-grayish-cyan {
+        color: var(--dark-grayish-cyan);
+    }
+
+    &--grayish-cyan {
+        color: var(--grayish-cyan);
+    }
+
+    &--very-dark-cyan {
+        color: var(--very-dark-cyan);
+    }
+
+    &--strong-cyan {
+        color: var(--strong-cyan);
+    }
+}
+
+.bc-color {
+    &--white {
+        background-color: var(--white);
+    }
+
+    &--dark-grayish-cyan {
+        background-color: var(--dark-grayish-cyan);
+    }
+
+    &--grayish-cyan {
+        background-color: var(--grayish-cyan);
+    }
+
+    &--very-dark-cyan {
+        background-color: var(--very-dark-cyan);
+    }
+
+    &--strong-cyan {
+        background-color: var(--strong-cyan);
+    }
+}

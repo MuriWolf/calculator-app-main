@@ -1,0 +1,87 @@
+.input {
+    position: relative;
+    width: 100%;
+    padding: 0.2em;
+    padding-right: 1em;
+    background-color: var(--very-light-grayish-cyan);
+
+    font-family: var(--primary-font);
+    font-size: 2.4rem;
+    text-align: right;
+    color: var(--very-dark-cyan);
+
+    border-radius: var(--border--sm);
+
+    &::placeholder {
+        color: var(--grayish-cyan);
+    }
+
+    &:focus {
+        outline: 2px solid var(--strong-cyan);
+    }
+} 
+
+.input-icon-holder {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        top: -50%;
+        left: 20px;
+    }
+}
+.label__input-bill::after {
+    content: url("../../images/icon-dollar.svg");
+}
+
+.label__input-people::after {
+    content: url("../../images/icon-person.svg");
+}
+
+.btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5em;
+
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    transition: all var(--time--sm);
+
+    cursor: pointer;
+    border-radius: var(--border--sm);
+
+    &:hover {
+        background-color: var(--light-grayish-cyan);
+    }
+}
+
+.btn--percentage {
+    background-color: var(--very-dark-cyan);
+    font-size: 2.5rem;
+    padding: 0.20em;
+    color: var(--white);
+
+    &:hover, &:focus {
+        background-color: var(--strong-cyan); 
+        color: var(--very-dark-cyan);
+    }
+}
+
+.input--percentage {
+    color: var(--very-dark-cyan);
+    text-transform: lowercase;
+    background-color: var(--very-light-grayish-cyan);
+    font-size: 2.4rem;
+    padding: 0.20em;
+
+    &::placeholder {
+        color: var(--grayish-cyan);
+    }
+
+    &:focus {
+        outline: 2px solid var(--strong-cyan);
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="src/sass/main.css">
+</head>
+<body>
+
+  <div class="l-tip-calculator">
+    <h1 class="main-title">Spli<br>tter</h1>
+    <div class="calculator-inputs">
+      <div class="calculator-inputs__section">
+        <h3 class="calculator-inputs__section__title">Bill</h3>
+        <label class="input-icon-holder label__input-bill" for=""><input class="input js-input-bill" type="number" name="" id="" placeholder="0"></label>
+      </div>
+
+      <div class="calculator-inputs__section"> 
+        <h3 class="calculator-inputs__section__title">Select tip %</h3> 
+        <div class="calculator-inputs__section__btns">
+          <button class="btn btn--percentage js-btn--percentage" value="5">5%</button>
+          <button class="btn btn--percentage js-btn--percentage" value="10">10%</button>
+          <button class="btn btn--percentage js-btn--percentage" value="15">15%</button>
+          <button class="btn btn--percentage js-btn--percentage" value="25">25%</button>
+          <button class="btn btn--percentage js-btn--percentage" value="50">50%</button>
+          <input class="btn input--percentage js-input--percentage" type="number" placeholder="custom"></input>
+        </div>
+      </div>
+      <div class="calculator-inputs__section">
+        <h3 class="calculator-inputs__section__title">Number of people</h3>
+        <label class="input-icon-holder label__input-people" for=""><input class="input js-input-people" type="number" name="" id="" placeholder="0"></label>
+      </div>
+
+    </div>
+
+    <div class="calculator-results">
+      <div>
+        <div class="calculator-result">
+          <div>
+            <h3 class="text--white">Tip Amount</h3>
+            <h4 class="text--grayish-cyan">/ person</h4>
+          </div>
+          <h2 class="js-calculator-result__money calculator-result__money js-tip-amount">$0.00</h2>
+        </div>
+        <div class="calculator-result">
+          <div>
+            <h3 class="text--white">Total</h3>
+            <h4 class="text--grayish-cyan">/ person</h4>
+          </div>
+          <h2 class="js-calculator-result__money calculator-result__money js-total">$0.00</h2>
+        </div>
+      </div>
+      <button class="btn text--very-dark-cyan bc-color--strong-cyan js-btn-reset" type="reset">reset</button>
+  </div>
+  </div>
+
+  <script type="module" src="./src/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+:root {
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --strong-cyan: hsl(172, 67%, 45%);
+  --primary-font: "Space Mono", monospace;
+  --border--lg: 24px;
+  --border--md: 16px;
+  --border--sm: 6px;
+  --time--sm: 0.20s;
+}
+
+.error-input {
+  outline: 2px solid red;
+  position: relative;
+  border-radius: var(--border--sm);
+}
+.error-input::before {
+  content: "cant be zero";
+  color: red;
+  font-size: 1.6rem;
+  position: absolute;
+  right: 0;
+  bottom: 300%;
+}
+
+.text--white {
+  color: var(--white);
+}
+.text--dark-grayish-cyan {
+  color: var(--dark-grayish-cyan);
+}
+.text--grayish-cyan {
+  color: var(--grayish-cyan);
+}
+.text--very-dark-cyan {
+  color: var(--very-dark-cyan);
+}
+.text--strong-cyan {
+  color: var(--strong-cyan);
+}
+
+.bc-color--white {
+  background-color: var(--white);
+}
+.bc-color--dark-grayish-cyan {
+  background-color: var(--dark-grayish-cyan);
+}
+.bc-color--grayish-cyan {
+  background-color: var(--grayish-cyan);
+}
+.bc-color--very-dark-cyan {
+  background-color: var(--very-dark-cyan);
+}
+.bc-color--strong-cyan {
+  background-color: var(--strong-cyan);
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--light-grayish-cyan);
+  font-family: var(--primary-font);
+  color: var(--dark-grayish-cyan);
+}
+
+a {
+  text-decoration: none;
+}
+
+p, a {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.25rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.l-tip-calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  max-width: 900px;
+  margin-top: 7rem;
+  padding: 34px;
+  border-radius: var(--border--lg);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 750px) {
+  .l-tip-calculator {
+    flex-direction: row;
+    gap: 50px;
+  }
+}
+.l-tip-calculator .main-title {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.25rem;
+  color: var(--very-dark-cyan);
+  text-transform: uppercase;
+  line-height: 1.35em;
+  letter-spacing: 0.5em;
+}
+
+.calculator-inputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.calculator-inputs__section {
+  margin-bottom: 4rem;
+}
+.calculator-inputs__section .calculator-inputs__section__title {
+  margin-bottom: 0.6em;
+}
+
+.calculator-inputs__section__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.calculator-inputs__section__btns > * {
+  flex: 1 1 100px;
+}
+
+.calculator-results {
+  flex: 1;
+  padding: 4rem 3.6rem;
+  margin-top: 4rem;
+  background-color: var(--very-dark-cyan);
+  border-radius: var(--border--md);
+}
+@media (min-width: 750px) {
+  .calculator-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0rem;
+  }
+}
+
+.calculator-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+@media (min-width: 750px) {
+  .calculator-result {
+    margin-bottom: 1.5rem;
+  }
+}
+.calculator-result .calculator-result__money {
+  font-size: 2.5rem;
+  color: var(--strong-cyan);
+}
+@media (min-width: 750px) {
+  .calculator-result .calculator-result__money {
+    font-size: 4.5rem;
+  }
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  padding: 0.2em;
+  padding-right: 1em;
+  background-color: var(--very-light-grayish-cyan);
+  font-family: var(--primary-font);
+  font-size: 2.4rem;
+  text-align: right;
+  color: var(--very-dark-cyan);
+  border-radius: var(--border--sm);
+}
+.input::-moz-placeholder {
+  color: var(--grayish-cyan);
+}
+.input:-ms-input-placeholder {
+  color: var(--grayish-cyan);
+}
+.input::placeholder {
+  color: var(--grayish-cyan);
+}
+.input:focus {
+  outline: 2px solid var(--strong-cyan);
+}
+
+.input-icon-holder {
+  position: relative;
+}
+.input-icon-holder::after {
+  position: absolute;
+  top: -50%;
+  left: 20px;
+}
+
+.label__input-bill::after {
+  content: url("../../images/icon-dollar.svg");
+}
+
+.label__input-people::after {
+  content: url("../../images/icon-person.svg");
+}
+
+.btn {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5em;
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all var(--time--sm);
+  cursor: pointer;
+  border-radius: var(--border--sm);
+}
+.btn:hover {
+  background-color: var(--light-grayish-cyan);
+}
+
+.btn--percentage {
+  background-color: var(--very-dark-cyan);
+  font-size: 2.5rem;
+  padding: 0.2em;
+  color: var(--white);
+}
+.btn--percentage:hover, .btn--percentage:focus {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.input--percentage {
+  color: var(--very-dark-cyan);
+  text-transform: lowercase;
+  background-color: var(--very-light-grayish-cyan);
+  font-size: 2.4rem;
+  padding: 0.2em;
+}
+.input--percentage::-moz-placeholder {
+  color: var(--grayish-cyan);
+}
+.input--percentage:-ms-input-placeholder {
+  color: var(--grayish-cyan);
+}
+.input--percentage::placeholder {
+  color: var(--grayish-cyan);
+}
+.input--percentage:focus {
+  outline: 2px solid var(--strong-cyan);
+}/*# sourceMappingURL=main.css.map */
